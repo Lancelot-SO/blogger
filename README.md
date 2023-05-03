@@ -94,7 +94,7 @@ To test the web app run the following command:
 
 - GitHub: [@githubhandle](https://github.com/Lancelot-SO)
 - Twitter: [@twitterhandle](https://twitter.com/Lancelot_hans)
-- LinkedIn: [LinkedIn](hhtps://www.linkedin.com/in/felix-sowah)
+- LinkedIn: [LinkedIn](htps://www.linkedin.com/in/felix-sowah)
 
 
 
