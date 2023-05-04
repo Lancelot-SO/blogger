@@ -32,6 +32,7 @@
 ### Key Features <a name="key-features"></a>
 
 - ORM model
+- Add data to database 
 - User, Comment, Post, and like model
 
 
