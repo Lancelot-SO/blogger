@@ -33,6 +33,7 @@
 
 - ORM model
 - Add data to database 
+- Add validation and Test
 - User, Comment, Post, and like model
 
 
