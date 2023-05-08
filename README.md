@@ -35,6 +35,8 @@
 - Add data to database 
 - Add validation and Test
 - User, Comment, Post, and like model
+- create controller
+- add UI 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
