@@ -37,6 +37,7 @@
 - User, Comment, Post, and like model
 - create controller
 - add UI 
+- Add test for controller
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
