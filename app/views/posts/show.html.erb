@@ -1,1 +1,19 @@
-<h1> Post detail with comments  </h1>
+<div class="post_detail">
+
+  <div class="post_detail_card">
+  <div class="post_detail_card_header">
+    <p class ="post_title"> Post <%=@post.id%> by <%=@post.author.name%></p>
+    <p>Comments: <%=@post.commentscounter%> Likes:  <%=@post.likescounter%></p>
+  </div>
+  <div>
+    <p><%=@post.text%></p>
+  </div>
+    </div>
+    <% if  !@post.comments.empty?%>
+    <div class ="post_detail_comment">
+     <% @post.comments.each do |comment| %>
+       <%= render 'shared/comment', comment:comment %>
+       <% end %>
+  </div>
+    <%end%>
+</div>

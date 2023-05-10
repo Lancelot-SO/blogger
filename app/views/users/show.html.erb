@@ -1,1 +1,22 @@
-<h1>A given User detail with posts</h1>
+<%= render 'shared/user', user:@user%>
+
+<div class="user_bio">
+ <h3>Bio</h3>
+ <p><%= @user.bio %><p>
+</div>
+
+<div class="user_post">
+   <% @user.most_three_recent_post.each do |post| %>
+
+      <%= render 'shared/post', post:post %>
+   <%end%>
+
+</div>
+<div class="button_holder">
+<button>
+ <%= link_to 'See all posts', "#{@user.id}/posts" %>
+</button>
+<button>
+ <%= link_to 'Back', :back %>
+</button>
+</div>
