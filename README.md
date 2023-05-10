@@ -39,6 +39,7 @@
 - add UI 
 - Add test for controller
 - Add views for the users page and post page
+- Add layout for views
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
