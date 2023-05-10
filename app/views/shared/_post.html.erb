@@ -1,0 +1,9 @@
+<div class= "post_card">
+<h4>
+ <%= link_to "Post ##{post.id }", "/users/#{@user.id}/posts/#{post.id}" %>
+ </h4>
+      <p> <%= post.title %> </p>
+      <p class="post_counter"><span>comments: <%=post.commentscounter%> </span>
+       <span>Likes: <%=post.likescounter%> </span>
+       </p>
+</div>

@@ -1,2 +1,19 @@
-<h1>list of posts for a given user </h1>
+<%= render 'shared/user', user:@user%>
+ <div class="post_list">
+   <% @posts.each do |post| %>
 
+      <%= render 'shared/post', post:post %>
+
+     <% if  !post.five_most_recent_comments.empty?%>
+         <div class ="post_comment">
+     <%post.five_most_recent_comments.each do |comment| %>
+          <%= render 'shared/comment', comment:comment %>
+       <% end %>
+        </div>
+     <% end %>
+   <% end %>
+  </div>
+<div class="button_holder">
+<button>Pagination</button>
+<button><%= link_to 'Back', :back %></button>
+</div>
