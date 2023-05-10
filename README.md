@@ -38,7 +38,7 @@
 - create controller
 - add UI 
 - Add test for controller
-- Add view
+- Add views for the pages
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
