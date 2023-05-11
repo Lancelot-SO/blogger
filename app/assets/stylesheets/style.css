@@ -109,7 +109,7 @@ button > a {
 }
 
 .post_card > h4 > a:hover {
-  color: #8b8400;
+  color: darkcyan;
 }
 
 .post_card > p {
@@ -187,13 +187,13 @@ button:hover {
 }
 
 .post_detail_card_header {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
   padding-right: 10px;
 }
 
-.post_detail_card_header > .post_title {
+.post_title_card {
   font-size: 20px;
 }
 
@@ -205,4 +205,93 @@ button:hover {
   width: 97%;
   padding: 10px;
   margin-left: 11px;
+}
+
+.post_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #504d4d;
+  border-radius: 1px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 20px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.post_form > h3 {
+  font-size: 25px;
+}
+
+.post_title {
+  width: 150%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post_text {
+  width: 155%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post_button {
+  border: 1px solid #504d4d;
+  border-radius: 1px;
+  padding: 5px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-right: 45px;
+}
+
+.comment_like_holder {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.comment_form_holder {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #504d4d;
+  border-radius: 1px;
+  background-color: #fff;
+  align-items: center;
+  margin-right: 21px;
+}
+
+.like_form_holder {
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #504d4d;
+  border-radius: 1px;
+  background-color: #fff;
+  align-items: center;
+}
+
+.comment_form_holder > h3 {
+  font-size: 20px;
+}
+
+.like_form_holder > h3 {
+  font-size: 20px;
+}
+
+.comment_form {
+  margin-right: 50px;
+}
+
+.comment_input {
+  width: 200%;
 }
