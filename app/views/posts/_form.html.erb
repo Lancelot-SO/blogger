@@ -1,0 +1,22 @@
+<%= form_with model: [@current_user, @current_user.posts.build] do |form| %>
+    <div class="post_form">
+    <h3> Add New Post </h3>
+      <div>
+      <%= form.label :title  %><br>
+      <%= form.text_field :title, class:'post_title'%>
+      <% form.object.errors.full_messages_for(:title).each do |message|%>
+      <div><%= message %></div>
+      <%end%>
+    </div>
+      <br>
+     <div>
+       <%= form.label :text%><br>
+        <%= form.text_area :text, class:'post_text'%>
+        <% form.object.errors.full_messages_for(:text).each do |message|%>
+        <div><%= message %></div>
+        <%end%>
+     </div>
+     <br>
+      <%= form.submit "Create Post", class:"post_button"%>
+    </div>
+<%end%>

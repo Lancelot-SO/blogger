@@ -1,3 +1,9 @@
 <% @users.each do |user| %>
     <%= render 'shared/user', user:user%>
 <%end%>
+
+<div class="button_holder">
+<button>
+<%= link_to 'Create new post', new_user_post_path(@current_user)%>
+</button>
+</div>

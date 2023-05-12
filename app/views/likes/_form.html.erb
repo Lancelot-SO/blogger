@@ -1,0 +1,5 @@
+<%= form_with model:[@user, @post, Like.new], url:user_post_likes_path(User.find(params[:user_id]), @post) do |form| %>
+    <div class="like_form">
+      <%= form.submit "Like", class:'post_button' %>
+    </div>
+<%end%>

@@ -14,7 +14,7 @@
 </div>
 <div class="button_holder">
 <button>
- <%= link_to 'See all posts', "#{@user.id}/posts" %>
+ <%= link_to 'See all posts', user_posts_path(@user,@posts) %>
 </button>
 <button>
  <%= link_to 'Back', :back %>
