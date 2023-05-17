@@ -1,32 +1,28 @@
 <div class="post_detail">
-
   <div class="post_detail_card">
-
-  <div class="post_detail_card_header">
-    <p class ="post_title_card"> Post # <%=@post.id%> by <%=@post.author.name%></p>
-    <p>Comments: <%=@post.commentscounter%> Likes: <%=@post.likescounter%></p>
-  </div>
-  <div>
-    <p><%=@post.text%></p>
-  </div>
+    <div class="post_detail_card_header">
+      <p class ="post_title_card"> Post # <%=@post.id%> by <%=@post.author.name%></p>
+      <p>Comments: <%=@post.commentscounter%> Likes: <%=@post.likescounter%></p>
     </div>
-    <% if  !@post.comments.empty?%>
-    <div class ="post_detail_comment">
-     <% @post.comments.each do |comment| %>
-       <%= render 'shared/comment', comment:comment %>
-       <% end %>
+    <div>
+      <p><%=@post.text%></p>
+    </div>
   </div>
-    <%end%>
-    <div class="comment_like_holder">
-
-     <div class= "comment_form_holder">
-       <h3>Leave a comment</h3>
+  <% if  !@post.comments.empty?%>
+    <div class ="post_detail_comment">
+      <% @post.comments.includes(:author).each do |comment| %>
+        <%= render 'shared/comment', comment:comment %>
+      <% end %>
+    </div>
+  <%end%>
+  <div class="comment_like_holder">
+    <div class= "comment_form_holder">
+      <h3>Leave a comment</h3>
       <%= render 'comments/form', comment: @comment %>
-      </div>
-
-       <div class="like_form_holder">
-        <h3>Like this post</h3>
-        <%= render 'likes/form', like: @like %>
-        </div>
-      </div>
+    </div>
+    <div class="like_form_holder">
+      <h3>Like this post</h3>
+      <%= render 'likes/form', like: @like %>
+    </div>
+  </div>
 </div>

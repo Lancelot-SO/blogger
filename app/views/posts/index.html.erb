@@ -1,19 +1,17 @@
 <%= render 'shared/user', user:@user%>
- <div class="post_list">
-   <% @posts.each do |post| %>
-
-      <%= render 'shared/post', post:post %>
-
-     <% if  !post.five_most_recent_comments.empty?%>
-         <div class ="post_comment">
-     <%post.five_most_recent_comments.each do |comment| %>
+<div class="post_list">
+  <% @posts.includes(:comments, :author).each do |post| %>
+    <%= render 'shared/post', post:post %>
+    <% if  !post.five_most_recent_comments.includes(:author).empty?%>
+      <div class ="post_comment">
+        <%post.five_most_recent_comments.includes(:author).each do |comment| %>
           <%= render 'shared/comment', comment:comment %>
-       <% end %>
-        </div>
-     <% end %>
-   <% end %>
-  </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 <div class="button_holder">
-<button>Pagination</button>
-<button><%= link_to 'Back', :back %></button>
+  <button>Pagination</button>
+  <button><%= link_to 'Back', :back %></button>
 </div>

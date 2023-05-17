@@ -41,6 +41,7 @@
 - Add views for the users page and post page
 - Add layout for views
 - Add form for post, comments, and likes 
+- Add integration tests and fix N+1 problems.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -96,13 +97,19 @@ To test the web app run the following command:
 
 ```
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Felix Adjei Sowah**
 
 - GitHub: [@githubhandle](https://github.com/Lancelot-SO)
 - Twitter: [@twitterhandle](https://twitter.com/Lancelot_hans)
-- LinkedIn: [LinkedIn](htps://www.linkedin.com/in/felix-sowah)
+- LinkedIn: [@LinkedIn](htps://www.linkedin.com/in/felix-sowah)
+
+👤 **Raphael Okolo**
+
+- GitHub: [@RaphOkolo](https://github.com/RaphDasilva)
+- Twitter: [@RaphOkolo](https://twitter.com/RaphOkolo)
+- LinkedIn: [@RaphOkolo](https://www.linkedin.com/in/RaphOkolo/)
 
 
 
