@@ -41,7 +41,7 @@
 - Add views for the users page and post page
 - Add layout for views
 - Add form for post, comments, and likes 
-- Add integration tests and fix N+1 problems
+- Add integration tests and fix N+1 problems.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
