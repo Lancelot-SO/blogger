@@ -10,7 +10,7 @@ RSpec.describe 'User index page:', type: :feature do
     visit users_path
     expect(page).to have_content(@user_one.name)
   end
-  scenario 'I can see the profile picture for each user.s' do
+  scenario 'I can see the profile picture for each user.' do
     visit users_path
     expect(@user_one.photo).to match(%r{^http?://.*\.(jpe?g|gif|png)$})
   end
