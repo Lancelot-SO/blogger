@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe 'User show page:', type: :feature do
   before(:each) do
     @user_one = User.create(name: 'unique_show', photo: 'http://localhost:3000/anything.jpg', bio: 'Anything test')
