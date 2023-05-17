@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.describe 'User index page:', type: :feature do
   before(:each) do
     @user_one = User.create(name: 'unique', photo: 'http://localhost:3000/anything.jpg', bio: 'Anything test')
