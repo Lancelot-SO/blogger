@@ -22,8 +22,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to request.referrer
   end
-
-
+  
   private
 
   def comment_params
