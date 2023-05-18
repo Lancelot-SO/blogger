@@ -1,2 +1,12 @@
 <p><span>Username:</span><%=comment.author.name %>
-<span>Comment:</span><%=comment.text %> </p>
+  <span>Comment:</span><%=comment.text %>
+  <% if can? :destroy, comment %>
+  <turbo-frame id="comment-frame">
+  <%= turbo_frame_tag 'comment-frame' do %>
+    <%= form_with url: user_post_comment_path(@user, comment.post, comment.id), method: :delete, data: { turbo_frame: '_top' } do |form| %>
+      <%= form.submit 'X', data: { turbo_confirm: "Are you sure?" } %>
+    <% end %>
+  <% end %>
+</turbo-frame>
+  <% end %>
+</p>

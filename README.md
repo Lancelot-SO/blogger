@@ -42,7 +42,8 @@
 - Add layout for views
 - Add form for post, comments, and likes 
 - Add integration tests and fix N+1 problems.
-- Add device
+- Add device.
+- add authorization
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
