@@ -1,9 +1,13 @@
+<div class="sign_out_button">
+  <button>
+    <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
+  </button>
+</div>
 <% @users.each do |user| %>
-    <%= render 'shared/user', user:user%>
+  <%= render 'shared/user', user:user%>
 <%end%>
-
 <div class="button_holder">
-<button>
-<%= link_to 'Create new post', new_user_post_path(@current_user)%>
-</button>
-</div
+  <button>
+    <%= link_to 'Create new post', new_user_post_path(current_user)%>
+  </button>
+</div>

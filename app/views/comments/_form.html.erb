@@ -1,25 +1,13 @@
-<%= form_with model:[@current_user, @post, Comment.new], url:user_post_comments_path(@current_user, @post) do |form| %>
-
-    <div class="comment_form">
-
-      <div>
-
-        <%= form.label :comment%><br>
-
-        <%= form.text_area :text, class:'comment_input' %>
-
-        <% form.object.errors.full_messages_for(:text).each do |message|%>
-
+<%= form_with model:[current_user, @post, Comment.new], url:user_post_comments_path(current_user, @post) do |form| %>
+  <div class="comment_form">
+    <div>
+      <%= form.label :comment%><br>
+      <%= form.text_area :text, class:'comment_input' %>
+      <% form.object.errors.full_messages_for(:text).each do |message|%>
         <div><%= message %></div>
-
-        <%end%>
-
-      </div>
-
-      <br>
-
-      <%= form.submit class:'post_button' %>
-
+      <%end%>
     </div>
-
+    <br>
+    <%= form.submit class:'post_button' %>
+  </div>
 <%end%>
