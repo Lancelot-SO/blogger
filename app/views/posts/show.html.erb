@@ -25,4 +25,13 @@
       <%= render 'likes/form', like: @like %>
     </div>
   </div>
+  <div class="button_holder">
+  <% if can? :destroy, @post%>
+    <button>
+      <%= link_to 'Delete post', user_post_path(@user,@post), data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+    </button>
+  <% end %>
 </div>

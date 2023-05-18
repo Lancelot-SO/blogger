@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
-    @post = current_user.posts.find(params[:post_id])
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
   end
 
   def create
@@ -9,11 +11,13 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     @comment.author = @user
     if @comment.save
-      redirect_to user_post_path(@user, @post)
+      redirect_to request.referrer
     else
       render :new
     end
   end
+
+
 
   private
 
