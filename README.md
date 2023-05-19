@@ -45,6 +45,7 @@
 - Add device.
 - add authorization
 - Add Api endpoints
+- add api documentation.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
