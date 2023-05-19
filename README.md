@@ -44,6 +44,7 @@
 - Add integration tests and fix N+1 problems.
 - Add device.
 - add authorization
+- Add Api endpoints
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
